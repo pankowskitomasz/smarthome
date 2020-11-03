@@ -1,25 +1,63 @@
 $backdrop__filter--privacy: blur(5px);
+$bg__about-img:
+    "../img/house.jpg",
+    "",
+    "../img/google-home.jpg";
+$bg__about-sub-img: "../img/wiring.jpg";
+$bg__blend--luminosity: luminosity;
 $bg__blend--soft: soft-light;
 $bg__classes:
     "error",
     "comingsoon",
-    "privacy";
+    "privacy",
+    "index",
+    "index-sub",
+    "offer",
+    "about",
+    "about-sub",
+    "contact",
+    "contact-sub";
 $bg__comingsoon-img: "../img/spark.jpg";
+$bg__contact-img: "../img/call.jpg";
+$bg__contact-sub-img: "../img/call_center.jpg";
 $bg__error-img: "../img/unplugged.jpg";
+$bg__index-img: 
+  "../img/spark.jpg",
+  "",
+  "",
+  "",
+  "../img/smart_lock.jpg";
+$bg__index-sub-img: "../img/smart_voice.jpg";
+$bg__offer-img: 
+  "",
+  "../img/google-home.jpg";
 $bg__privacy-img: "../img/privacy.jpg";
 $bg__aoa:
     $bg__error-img,
     $bg__comingsoon-img,
-    $bg__privacy-img;
+    $bg__privacy-img,
+    $bg__index-img,
+    $bg__index-sub-img,
+    $bg__offer-img,
+    $bg__about-img,
+    $bg__about-sub-img,
+    $bg__contact-img,
+    $bg__contact-sub-img;
 $body__min-height: 100%;
 $color__bg-1: #ddd;
+$color__dark: #333;
+$color__primary: #483d8b;
+$color__primary-light: lighten(#483d8b,25%);
 $color__transparent: transparent;
 $font-logo__family: 'MuseoModerno', cursive;
 $font-logo__size: 24px;
 $font-main__family: 'Roboto', sans-serif;
 $font-main__size: 16px;
-$header__height: 74px;
+$header__height: 78px;
+$nav-link__hover--opacity: 0.6;
 $section__min-height: 100vh;
+$text__shadow: 0 0 2px $color__dark;
 $theme-colors: (
-  "primary": #483d8b,
+  "primary": $color__primary,
+  "primary-light": $color__primary-light
 );

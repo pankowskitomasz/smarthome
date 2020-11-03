@@ -9,14 +9,96 @@
     @include calc-param(min-height, $section__min-height, $header__height);
 }
 
+%bg-blend-ext{
+    @include background-blend($bg__blend--luminosity, $color__primary);
+    @include calc-param(min-height, $section__min-height, $header__height);
+}
+
+.about{
+    &-s1{
+        @extend %bg-blend-ext;
+    }
+    &-sub{
+        &-s1{
+            @extend %bg-blend-ext;
+            background-attachment: scroll !important;
+        }
+    }
+}
 .comingsoon{
     &-s1{
         @extend %bg-blend;
     }
 }
+.contact{
+    &-s1{
+        @extend %bg-blend;
+    }
+    &-sub{
+        &-s1{
+            @extend %bg-blend-ext;
+            background-attachment: scroll !important;
+        }
+    }
+
+}
 .error{
     &-s1{
         @extend %bg-blend;
+    }
+}
+.h{
+    &-20vh{
+        height: 20vh;
+    }
+    &-30vh{
+        height: 30vh;
+    }
+}
+.minh{
+    &-20{
+        min-height: 20vh;
+    }
+    &-33{
+        min-height: 33vh;
+    }
+    &-50{
+        min-height: 50vh;
+    }
+    &-100{
+        min-height: 100vh;
+    }
+}
+.img{
+    &-fit{
+        object-fit: cover;
+    }
+}
+.index{
+    &-s1{
+        @extend %bg-blend-ext;
+    }
+}
+.font{
+    &-logo{
+        @include set-font-params($font-logo__family,$font-logo__size);
+    }
+    &-menu{
+        @include set-font-params($font-main__family,$font-main__size);
+    }
+}
+.nav{
+    &-link{
+        &:hover{
+            opacity: $nav-link__hover--opacity;
+        }
+    }
+}
+.navbar{
+    &-toggler{
+        &-icon{
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+        }
     }
 }
 .privacy{
@@ -28,18 +110,13 @@
         @extend %bg-blend;
     }
 }
-.font{
-    &-logo{
-        @include set-font-params($font-logo__family,$font-logo__size);
-    }
-    &-menu{
-        @include set-font-params($font-main__family,$font-main__size);
+.text{
+    &-shadow{
+        text-shadow: $text__shadow;
     }
 }
-.navbar{
-    &-toggler{
-        &-icon{
-            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
-        }
+.z{
+    &-10{
+        z-index: 10;
     }
 }
