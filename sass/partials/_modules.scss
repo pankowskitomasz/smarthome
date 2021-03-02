@@ -33,6 +33,8 @@
 .contact{
     &-s1{
         @extend %bg-blend;
+        background-position: right top;
+        background-size: cover;
     }
     &-sub{
         &-s1{
@@ -59,11 +61,17 @@
     &-20{
         min-height: 20vh;
     }
+    &-25{
+        min-height: 25vh;
+    }
     &-33{
         min-height: 33vh;
     }
     &-50{
         min-height: 50vh;
+    }
+    &-75{
+        min-height: 75vh;
     }
     &-100{
         min-height: 100vh;
@@ -101,6 +109,11 @@
         }
     }
 }
+.product{
+    &-img{
+        height: 50vh;
+    }
+}
 .privacy{
     &-container{
         background-color: $color__transparent !important;
@@ -118,5 +131,20 @@
 .z{
     &-10{
         z-index: 10;
+    }
+}
+@media all and (min-height: 500px){
+    .product{
+        &-img{
+            height: 30vh;
+        }
+    }
+}
+
+@media all and (min-height: 1024px){
+    .product{
+        &-img{
+            height: 20vh;
+        }
     }
 }
